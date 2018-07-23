@@ -1,4 +1,4 @@
-public partial class bs_pulpit_paint : Form
+public partial class pulpit_paint : Form
     {
         //pioro, czyli narzedzie do rysowania
         Pen pioro = new Pen(Color.Blue, 2);
@@ -214,7 +214,7 @@ public partial class bs_pulpit_paint : Form
         }
         
         //mozliwosc wyboru rodzaju linii
-        private System.Drawing.Drawing2D.DashStyle bs_stylLinii(int i)
+        private System.Drawing.Drawing2D.DashStyle stylLinii(int i)
         {
             switch (i)
             { 
