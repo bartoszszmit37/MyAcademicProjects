@@ -150,8 +150,8 @@ public partial class pulpit_paint : Form
         private void rysownica_MouseMove(object sender, MouseEventArgs e)
         {
             //rozpoznanie polozeniamszy
-            bs_wspolrzedna_x.Text = e.Location.X.ToString();
-            bs_wspolrzedna_y.Text = e.Location.Y.ToString();
+            wspolrzedna_x.Text = e.Location.X.ToString();
+            wspolrzedna_y.Text = e.Location.Y.ToString();
         }
 
         //mozliwosc ustawienia koloru linii
@@ -195,7 +195,7 @@ public partial class pulpit_paint : Form
                 //zmienna string, w ktorej przechowywac bedziemy nazwe pliku
                 string nazwa_pliku = otwieranie.FileName;
                 Bitmap bitmapa = new Bitmap(nazwa_pliku);
-                refRysownica.DrawImage(bitmapa,bs_rysownica.Left,rysownica.Top);
+                refRysownica.DrawImage(bitmapa,rysownica.Left,rysownica.Top);
                 rysownica.Refresh();
             }
         }
