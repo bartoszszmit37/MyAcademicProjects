@@ -60,7 +60,7 @@ public partial class Form1 : Form
             GornaGrafnicaPrzedzialu.TextAlign = ContentAlignment.MiddleCenter;
             GornaGrafnicaPrzedzialu.Location = new Point(400,170);
             GornaGrafnicaPrzedzialu.Size = new System.Drawing.Size(200,70);
-            this.tabControl1.SelectedTab.Controls.Add(bs_GornaGrafnicaPrzedzialu);
+            this.tabControl1.SelectedTab.Controls.Add(GornaGrafnicaPrzedzialu);
 
 
             
@@ -80,8 +80,8 @@ public partial class Form1 : Form
             los_lista.Font = new Font(FontFamily.GenericSansSerif,10.25f,FontStyle.Italic);
             los_lista.Size = new System.Drawing.Size(200,30);
             los_lista.Location = new Point(270,270);
-            this.tabControl1.SelectedTab.Controls.Add(bs_los_lista);
-            los_lista.Click += new EventHandler(bs_los_lista_Click);
+            this.tabControl1.SelectedTab.Controls.Add(los_lista);
+            los_lista.Click += new EventHandler(los_lista_Click);
 
             komunikat_wartosci_losowe.BackColor = Color.White;
             komunikat_wartosci_losowe.ForeColor = Color.Black;
@@ -108,13 +108,13 @@ public partial class Form1 : Form
                 dgwListaWyplaty.Rows[i].Cells[1].Value = NominalyBankomatu[i,1];
 
                 
-                if (NominalyBankomatu[bs_i,1]>=NajmniejszyBanknot)
+                if (NominalyBankomatu[i,1]>=NajmniejszyBanknot)
                 {
-                    dgwListaWyplaty.Rows[bs_i].Cells[2].Value = "Banknot";
+                    dgwListaWyplaty.Rows[i].Cells[2].Value = "Banknot";
                 }
                 else
                 {
-                    dgwListaWyplaty.Rows[bs_i].Cells[2].Value= "Moneta";
+                    dgwListaWyplaty.Rows[i].Cells[2].Value= "Moneta";
                 }
                 if (cmbRodzajWaluty.SelectedIndex==0)
                 {
@@ -198,7 +198,7 @@ public partial class Form1 : Form
             while (pieniadze_do_wyplaty > 0)
             {
                 
-                    for (i = 0; i < NominalyBankomatu.GetLength(0); bs_i++)
+                    for (i = 0; i < NominalyBankomatu.GetLength(0); i++)
                     {
                         ilosc_nominalow = Convert.ToInt16(pieniadze_do_wyplaty / NominalyBankomatu[i, 1]);
                         if (ilosc_nominalow > (NominalyBankomatu[i, 0]))
@@ -211,9 +211,9 @@ public partial class Form1 : Form
                             NominalyBankomatu[i, 0] = ilosc_nominalow;
                         }
                         dgwListaWyplaty.Rows.Add();
-                        dgwListaWyplaty.Rows[i].Cells[0].Value = NominalyBankomatu[bs_i, 0];
-                        dgwListaWyplaty.Rows[i].Cells[1].Value = NominalyBankomatu[bs_i, 1];
-                        pieniadze_do_wyplaty = pieniadze_do_wyplaty - NominalyBankomatu[i, 0] * NominalyBankomatu[bs_i, 1];
+                        dgwListaWyplaty.Rows[i].Cells[0].Value = NominalyBankomatu[i, 0];
+                        dgwListaWyplaty.Rows[i].Cells[1].Value = NominalyBankomatu[i, 1];
+                        pieniadze_do_wyplaty = pieniadze_do_wyplaty - NominalyBankomatu[i, 0] * NominalyBankomatu[i, 1];
                         if (ilosc_nominalow != 0)
                         {
                             wyplacona_wartosc = wyplacona_wartosc + ilosc_nominalow * NominalyBankomatu[i, 1]; 
