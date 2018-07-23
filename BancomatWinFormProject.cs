@@ -132,7 +132,7 @@ public partial class Form1 : Form
             StanTabPage[0] = false;
 
 
-            //bs_nowa_wyplata.Visible = false;
+            //nowa_wyplata.Visible = false;
             tabControl1.SelectedTab = tabPage3;
         }
 
