@@ -16,9 +16,9 @@ public partial class Form1 : Form
         
         int wyplacona_wartosc;
         bool[] StanTabPage = { true, false, false };
-        int bs_i = 0;
+        int i = 0;
        //definicja stałej 
-        const int bs_NajmniejszyBanknot=10;
+        const int NajmniejszyBanknot=10;
         int pieniadze_do_wyplaty;
         int ilosc_nominalow;
         //definicja zmiennej losowej
@@ -43,7 +43,7 @@ public partial class Form1 : Form
             DolnaGranicaPrzedzialu.TextAlign = ContentAlignment.MiddleCenter;
             DolnaGranicaPrzedzialu.Location = new Point(140,170);
                 DolnaGranicaPrzedzialu.Size = new System.Drawing.Size(200,70);
-            this.tabControl1.SelectedTab.Controls.Add(bs_DolnaGranicaPrzedzialu);
+            this.tabControl1.SelectedTab.Controls.Add(DolnaGranicaPrzedzialu);
             txtDolnaGranicaPrzedzialu.BackColor = Color.White;
             txtDolnaGranicaPrzedzialu.ForeColor = Color.Black;
             txtDolnaGranicaPrzedzialu.Text = "";
@@ -52,7 +52,7 @@ public partial class Form1 : Form
                 txtDolnaGranicaPrzedzialu.Location = new Point(190,240);
             txtDolnaGranicaPrzedzialu.Size = new System.Drawing.Size(100,70);
             xtDolnaGranicaPrzedzialu.BorderStyle = BorderStyle.FixedSingle;
-            this.tabControl1.SelectedTab.Controls.Add(bs_txtDolnaGranicaPrzedzialu);
+            this.tabControl1.SelectedTab.Controls.Add(txtDolnaGranicaPrzedzialu);
 
             
             GornaGrafnicaPrzedzialu.Text = "Górna granica przedziału nominałów";
