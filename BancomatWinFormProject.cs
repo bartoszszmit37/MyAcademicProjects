@@ -5,7 +5,7 @@ public partial class Form1 : Form
         Label GornaGrafnicaPrzedzialu = new Label();
         TextBox txtDolnaGranicaPrzedzialu = new TextBox();
         TextBox txtGornaGranicaPrzedzialu = new TextBox();
-        Label komunikat_wartosci_losowe = new Label();
+        Label komunikat_wartosci_losowe = new Label(); 
         int dolna_granica;
         int gorna_granica;
         Button los_lista = new Button();
