@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=iso-8859-2">
+  <meta name="Description" content=" [wstaw tu opis strony] ">
+  <meta name="Keywords" content=" [wstaw tu slowa kluczowe] ">
+  <meta name="Author" content=" [dane autora] ">
+  <meta name="Generator" content="kED2">
+
+  <title> [tytuł strony] </title>
+	
+<link rel="stylesheet" href="style.css" type="text/css">
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	$('#wszystkie_min a').click(function(evt) {
+		 evt.preventDefault();
+		  var imgPath = $(this).attr('href');
+		  var oldImage = $('#madre img');
+		  var newImage = $('<img src="' + imgPath +'">');
+			 newImage.hide();
+			  $('#madre').prepend(newImage);
+			 newImage.fadeIn(1000);
+			 oldImage.fadeOut(1000,function(){
+			 $(this).remove();
+			 
+			 });
+			 
+		 
+	}); // Koniec funkcji click().
+		
+		$('#wszystkie_min a:first').click();
+}); // Koniec funkcji ready().
+</script>
+</head>
+<body>
+<div id="glowny">
+	<div id="banner">
+		<img src="baner.gif" alt="" width="700" height="119" />
+	</div>
+	<div id="madre">
+	</div>
+	
+	<div id="autorka">
+	<p>Elżbieta Szmit</p>
+	</div>
+	<div id="wszystkie_min">
+	<div id="miniaturki_kol1">
+		<ul class="lista">
+      <li><a href="maziajka2.jpg"><img src="maziajka2.jpg" alt="" width="69" height="66,10"/></a></li>
+			<li><a href="maziajka5.jpg"><img src="maziajka5.jpg" alt="" width="69" height="66,10"/></a></li>
+			<li><a href="maziajka7.jpg"><img src="maziajka7.jpg" alt="" width="69" height="66,10"/></a></li>
+		</ul>
+	</div>
+	<div id="miniaturki_kol2">
+		<ul class="lista">
+      <li><a href="maziajka3.jpg"><img src="maziajka3.jpg" alt="" width="69" height="66,10" /></a></li>
+			<li><a href="maziajka6.jpg"><img src="maziajka6.jpg" alt="" width="69" height="66,10" /></a></li>
+			<li><a href="maziajka8.jpg"><img src="maziajka8.jpg" alt="" width="69" height="66,10" /></a></li>
+			<li><a href="maziajka10.jpg"><img src="maziajka10.jpg" alt="" width="69" height="66,10" /></a></li>
+			
+    </ul>
+	</div>
+	<div id="miniaturki_kol3">
+		<ul class="lista">
+      <li><a href="maziajka4.jpg"><img src="maziajka4.jpg" alt="" width="69" height="66,10" /></a></li>
+			<li><a href="maziajka1.jpg"><img src="maziajka1.jpg" alt="" width="69" height="66,10" /></a></li>
+			<li><a href="maziajka9.jpg"><img src="maziajka9.jpg" alt="" width="69" height="66,10" /></a></li>
+    </ul>
+	</div>
+	</div><!-- koniec diva wszystkie min -->
+	<div id="powrot"><a href="index.html">Powrót</a></div>
+<div id="powrot2">
+	<a href="http://www.bartoszszmit.cba.pl">Powrót do Portfolio</a>
+</div>
+</div>
+<!-- tutaj wstaw tresc strony -->
+
+</body>
+</html>
