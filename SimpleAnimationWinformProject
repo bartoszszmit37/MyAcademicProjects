@@ -51,7 +51,7 @@ public partial class PrzestrzenUkladuSlonecznego : Form
             //narysowanie elipsy w kształcie okregu oraz wypelnienie jej czerwonym kolorem
             //nastepnie ustawienie obiektu okregu na srodku ekranu 
             //oraz ustawienie wielkosci okregu na szer i wys
-            e.Graphics.FillEllipse(Brushes.Red, this.Width/2 - bs_R_Slonca,
+            e.Graphics.FillEllipse(Brushes.Red, this.Width/2 - R_Slonca,
                 this.Height/2 - R_Slonca,2*R_Slonca,2*R_Slonca);
             
             //wyznaczenie poczatkowego polozenia ziemi
